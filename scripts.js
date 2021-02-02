@@ -98,8 +98,15 @@ var ExpUtils = /** @class */ (function () {
 ExpUtils["__class"] = "ExpUtils";
 function getExp()
 {
+        var flag;
 	var l_lv=document.getElementById("l_lv");
 	var s_lv=document.getElementById("s_lv");
-	var e=new ExpUtils(true);
+        var t=document.getElementById("true");
+        var f =document.getElementById("false");
+         if(t.checked=true)
+                flag=true;
+        else if(f.checked=true)
+                flag=false;
+	var e=new ExpUtils(flag);
 	window.alert(e.addExp(l_lv.value,s_lv.value));
 }
