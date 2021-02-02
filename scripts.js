@@ -96,7 +96,7 @@ var ExpUtils = /** @class */ (function () {
 ExpUtils["__class"] = "ExpUtils";
 function getExp()
 {
-        var flag;
+        var flag=false;
 	var l_lv=document.getElementById("l_lv");
 	var s_lv=document.getElementById("s_lv");
         var t=document.getElementById("true");
@@ -106,6 +106,8 @@ function getExp()
         else if(f.checked)
                 flag=false;
 	var e=new ExpUtils(flag);
-	window.alert(e.addExp(parseFloat(l_lv.value),parseFloat(s_lv.value)));
+        var lv=parseFloat(l_lv.value);
+        var sv=parseFloat(s_lv.value)
+        alert(e.addExp(lv,sv));
 }
 
