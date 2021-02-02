@@ -96,3 +96,10 @@ var ExpUtils = /** @class */ (function () {
     return ExpUtils;
 }());
 ExpUtils["__class"] = "ExpUtils";
+function getExp()
+{
+	var l_lv=document.getElementById("l_lv");
+	var s_lv=document.getElementById("s_lv");
+	var e=new ExpUtils(true);
+	window.alert(e.addExp(l_lv.value,s_lv.value));
+}
