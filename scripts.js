@@ -103,9 +103,9 @@ function getExp()
 	var s_lv=document.getElementById("s_lv");
         var t=document.getElementById("true");
         var f =document.getElementById("false");
-         if(t.checked=true)
+         if(t.checked)
                 flag=true;
-        else if(f.checked=true)
+        else if(f.checked)
                 flag=false;
 	var e=new ExpUtils(flag);
 	window.alert(e.addExp(l_lv.value,s_lv.value));
