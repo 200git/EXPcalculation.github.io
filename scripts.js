@@ -11,8 +11,8 @@ var ExpUtils = /** @class */ (function () {
         if (isURorPRY) {
             for (var i = 0; i < this.perExp.length; i++) {
                 {
-                    this.out_perExp[i] = ((1.2 * this.perExp[i]) | 0);
-                    this.out_minExp[i] = ((1.2 * this.minExp[i]) | 0);
+                    this.out_perExp[i] = ((1.2 * this.perExp[i]));
+                    this.out_minExp[i] = ((1.2 * this.minExp[i]));
                 }
                 ;
             }
@@ -56,22 +56,22 @@ var ExpUtils = /** @class */ (function () {
             formatExp = (this.level_rate > 1 && level === 91) ? (((this.minExp[4] + (level - 81) * this.perExp[4]) * this.level_rate) | 0) : (this.out_minExp[4] + (level - 81) * this.out_perExp[4]);
         }
         else if (level > 91 && level <= 93) {
-            formatExp = (((this.minExp[5] * this.level_rate + this.perExp[5] * this.level_rate * (level - 91))) | 0);
+            formatExp = (((this.minExp[5] * this.level_rate + this.perExp[5] * this.level_rate * (level - 91))));
         }
         else if (level > 93 && level <= 95) {
-            formatExp = (((this.minExp[6] * this.level_rate + this.perExp[6] * this.level_rate * (level - 93))) | 0);
+            formatExp = (((this.minExp[6] * this.level_rate + this.perExp[6] * this.level_rate * (level - 93))));
         }
         else if (level > 95 && level <= 96) {
-            formatExp = (((this.minExp[7] * this.level_rate + this.perExp[7] * this.level_rate * (level - 95))) | 0);
+            formatExp = (((this.minExp[7] * this.level_rate + this.perExp[7] * this.level_rate * (level - 95))));
         }
         else if (level > 96 && level <= 98) {
-            formatExp = (((this.minExp[8] * this.level_rate + this.perExp[8] * this.level_rate * (level - 96))) | 0);
+            formatExp = (((this.minExp[8] * this.level_rate + this.perExp[8] * this.level_rate * (level - 96))));
         }
         else if (level > 98 && level <= 99) {
-            formatExp = (((this.minExp[9] * this.level_rate + this.perExp[9] * this.level_rate * (level - 98))) | 0);
+            formatExp = (((this.minExp[9] * this.level_rate + this.perExp[9] * this.level_rate * (level - 98))));
         }
         else if (level > 99 && level <= 100) {
-            formatExp = (((this.minExp[10] * this.level_rate + this.perExp[10] * this.level_rate * (level - 99))) | 0);
+            formatExp = (((this.minExp[10] * this.level_rate + this.perExp[10] * this.level_rate * (level - 99))));
         }
         if (level > 100 && level <= 101) {
             formatExp = (this.out_minExp[11] + (level - 100) * this.out_perExp[11]);
@@ -110,3 +110,4 @@ function getExp()
 	var e=new ExpUtils(flag);
 	window.alert(e.addExp(l_lv.value,s_lv.value));
 }
+
