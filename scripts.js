@@ -31,7 +31,7 @@ var ExpUtils = /** @class */ (function () {
     ExpUtils.prototype.addExp = function (l, s) {
         if (l <= s) {
             var sum = 0;
-            for (var i = l + 1; i <= s; i++) {
+            for (var i = l; i <= s; i++) {
                 sum += this.switchExp(i);
             }
             return sum;
