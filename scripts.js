@@ -107,6 +107,6 @@ function getExp()
                 flag=true;
         else if(f.checked)
                 flag=false;
-	var e=new ExpUtils(flag);
+	var e=new ExpUtils(false);
 	window.alert(e.addExp(l_lv.value,s_lv.value));
 }
