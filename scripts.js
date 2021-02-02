@@ -9,8 +9,8 @@ var ExpUtils = /** @class */ (function () {
         if (isURorPRY) {
             for (var i = 0; i < this.perExp.length; i++) {
                 {
-                    this.out_perExp[i] = ((1.2 * this.perExp[i]));
-                    this.out_minExp[i] = ((1.2 * this.minExp[i]));
+                    this.out_perExp[i] = 1.2 * this.perExp[i];
+                    this.out_minExp[i] = 1.2 * this.minExp[i];
                 }
                 ;
             }
@@ -106,6 +106,6 @@ function getExp()
         else if(f.checked)
                 flag=false;
 	var e=new ExpUtils(flag);
-	window.alert(e.addExp(l_lv.value,s_lv.value));
+	window.alert(e.addExp(l_lv.innerText,s_lv.innerText));
 }
 
