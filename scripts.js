@@ -4,10 +4,8 @@ var ExpUtils = /** @class */ (function () {
         this.level_rate = 1;
         this.minExp = [0, 4000, 8000, 11000, 15000, 20000, 22000, 26000, 30000, 40000, 60000, 132000, 70000, 78000, 85000, 145000, 235000];
         this.perExp = [100, 200, 300, 400, 500, 1000, 2000, 4000, 5000, 20000, 72000, -62000, 2000, 7000, 12000, 18000, 21000];
-        this.out_minExp = (function (s) { var a = []; while (s-- > 0)
-            a.push(0); return a; })(this.minExp.length);
-        this.out_perExp = (function (s) { var a = []; while (s-- > 0)
-            a.push(0); return a; })(this.perExp.length);
+        this.out_minExp =new Array(this.minExp.length);
+        this.out_perExp =new Array(this.perExp.length);
         if (isURorPRY) {
             for (var i = 0; i < this.perExp.length; i++) {
                 {
