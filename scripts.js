@@ -108,7 +108,8 @@ function getExp()
                 flag=false;
 	var e=new ExpUtils(flag);
         var lv=parseFloat(l_lv.value);
-        var sv=parseFloat(s_lv.value)
-        alert("还需要:"+(e.addExp(lv,sv)-parseFloat(exp.value))+"经验从"+lv+"级提升到"+sv+"级~");
+        var sv=parseFloat(s_lv.value);
+        var result=e.addExp(lv,sv)-parseFloat(exp.value);
+        alert("还需要:"+(result>=0?result:0)+"经验从"+lv+"级提升到"+sv+"级~");
 }
 
