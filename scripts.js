@@ -99,6 +99,7 @@ function getExp()
         var flag=false;
 	var l_lv=document.getElementById("l_lv");
 	var s_lv=document.getElementById("s_lv");
+        var exp=document.getElementById("exp");
         var t=document.getElementById("true");
         var f =document.getElementById("false");
          if(t.checked)
@@ -108,6 +109,6 @@ function getExp()
 	var e=new ExpUtils(flag);
         var lv=parseFloat(l_lv.value);
         var sv=parseFloat(s_lv.value)
-        alert(e.addExp(lv,sv));
+        alert("还需要:”(e.addExp(lv,sv)-parseFloat(exp.value))"经验从"+lv+"级提升到"+sv+"级~");
 }
 
