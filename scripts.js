@@ -21,7 +21,7 @@ var ModifiedExpUtil=(function() {
 	function ModifiedExpUtil(isURorPRY) {
 		this.isURorPRY = isURorPRY;
 	}
-	ModifiedExpUtil.prototype.addExp = function(l, s) {
+	this.addExp = function(l, s) {
 		if (l <= s)
 		{
             var sum = 0;
@@ -33,7 +33,7 @@ var ModifiedExpUtil=(function() {
         }
         return 0;
 	};
-	ModifiedExpUtil.prototype.switchExp = function(level) {
+	this.switchExp = function(level) {
 		var formatExp=0;
 		for (var i=0;i < (levels.length - 1);i++)
 		{
