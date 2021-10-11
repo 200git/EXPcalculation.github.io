@@ -41,7 +41,7 @@ var ModifiedExpUtil=(function() {
 			{
 				var temp=minExp[i] + (level - levels[i]) * perExp[i];
 				//这里不改
-				formatExp = !isURorPRY ?temp: (int)(i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
+				formatExp = !this.isURorPRY ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
 				break;
 			}
 		}
