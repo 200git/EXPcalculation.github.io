@@ -17,9 +17,9 @@ var ModifiedExpUtil=(function() {
 		96,98,99,100,
 		101,106,111,116,121,126];
 	//等级组别
-	var isURorPRY;
+	var flag;
 	function ModifiedExpUtil(isURorPRY) {
-		this.isURorPRY = isURorPRY;
+		flag = isURorPRY;
 	}
 	this.addExp = function(l, s) {
 		if (l <= s)
@@ -41,7 +41,7 @@ var ModifiedExpUtil=(function() {
 			{
 				var temp=minExp[i] + (level - levels[i]) * perExp[i];
 				//这里不改
-				formatExp = !this.isURorPRY ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
+				formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
 				break;
 			}
 		}
