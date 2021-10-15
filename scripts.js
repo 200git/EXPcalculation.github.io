@@ -17,7 +17,6 @@ function ModifiedExpUtil(flag){
 		96,98,99,100,
 		101,106,111,116,121,126];
 	//等级组别
-	var flag=false;
 	this.addExp = function(l, s) {
 		if (l <= s)
 		{
