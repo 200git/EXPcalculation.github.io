@@ -1,4 +1,4 @@
-var ModifiedExpUtil=function() {
+function ModifiedExpUtil(flag){
 	var minExp=
 	[0,4000,8000,11000,
 		15000,20000,22000,26000,
@@ -18,9 +18,6 @@ var ModifiedExpUtil=function() {
 		101,106,111,116,121,126];
 	//等级组别
 	var flag=false;
-	function ModifiedExpUtil(isURorPRY) {
-		flag = isURorPRY;
-	}
 	this.addExp = function(l, s) {
 		if (l <= s)
 		{
