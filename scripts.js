@@ -1,4 +1,4 @@
-var ModifiedExpUtil=(function() {
+var ModifiedExpUtil=function() {
 	var minExp=
 	[0,4000,8000,11000,
 		15000,20000,22000,26000,
@@ -47,8 +47,7 @@ var ModifiedExpUtil=(function() {
 		}
 		return formatExp;
 	};
-});
-MdofiedExpUtil["__class"] = "ModifiedExpUtil";
+}
 function getExp()
 {
         var flag=false;
