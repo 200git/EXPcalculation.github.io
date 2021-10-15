@@ -17,7 +17,7 @@ var ModifiedExpUtil=(function() {
 		96,98,99,100,
 		101,106,111,116,121,126];
 	//等级组别
-	var flag;
+	var flag=false;
 	function ModifiedExpUtil(isURorPRY) {
 		flag = isURorPRY;
 	}
@@ -65,6 +65,6 @@ function getExp()
         var lv=parseFloat(l_lv.value);
         var sv=parseFloat(s_lv.value);
         var result=meu.addExp(lv,sv)-parseFloat(exp.value);
-        alert("还需要:"+(result>=0?result:0)+"经验从"+lv+"级提升到"+sv+"级~");
+        alert("还需要:"+(result>=0?result:0)+"经验从"+lv+"级提升到"+sv+"级~"+meu.flag);
 }
 
