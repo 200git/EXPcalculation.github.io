@@ -30,14 +30,14 @@ function ModifiedExpUtil(flag){
         return 0;
 	};
 	this.switchExp = function(level) {
-		this.formatExp=0;
+		var formatExp=0;
 		for (var i=0;i < (levels.length - 1);i++)
 		{
 			if (level >= levels[i] && level < levels[i + 1])
 			{
 				var temp=minExp[i] + (level - levels[i]) * perExp[i];
 				//这里不改
-				this.formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
+                                formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
 				break;
 			}
 		}
