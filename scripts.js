@@ -1,17 +1,17 @@
 function ModifiedExpUtil(flag){
-	var minExp=
+	this.minExp=
 	[0,4000,8000,11000,
 		15000,20000,22000,26000,
 		30000,40000,60000,132000,
 		50000,65000,95000,145000,220000];
 	//每个节点的最小经验值
-	var perExp=
+	this.perExp=
 	[100,200,300,400,
 		500,1000,2000,4000,
 		5000,20000,72000,-82000,
 		3000,6000,10000,15000,21000];
 	//每个节点增加的经验值
-	var levels=
+	this.levels=
 	[1,41,61,71,
 		81,91,93,95,
 		96,98,99,100,
@@ -30,14 +30,14 @@ function ModifiedExpUtil(flag){
         return 0;
 	};
 	this.switchExp = function(level) {
-		var formatExp=0;
+		this.formatExp=0;
 		for (var i=0;i < (levels.length - 1);i++)
 		{
 			if (level >= levels[i] && level < levels[i + 1])
 			{
 				var temp=minExp[i] + (level - levels[i]) * perExp[i];
 				//这里不改
-				formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
+				this.formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
 				break;
 			}
 		}
