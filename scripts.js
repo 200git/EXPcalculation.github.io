@@ -1,4 +1,4 @@
-function ModifiedExpUtil(flag){
+function ModifiedExpUtil(isURorPRY) {
 	this.minExp=
 	[0,4000,8000,11000,
 		15000,20000,22000,26000,
@@ -17,6 +17,7 @@ function ModifiedExpUtil(flag){
 		96,98,99,100,
 		101,106,111,116,121,126];
 	//等级组别
+	this.flag = isURorPRY;
 	this.addExp = function(l, s) {
 		if (l <= s)
 		{
@@ -31,13 +32,13 @@ function ModifiedExpUtil(flag){
 	};
 	this.switchExp = function(level) {
 		var formatExp=0;
-		for (var i=0;i < (levels.length - 1);i++)
+		for (var i=0;i < (this.levels.length - 1);i++)
 		{
-			if (level >= levels[i] && level < levels[i + 1])
+			if (level >=this.levels[i] && level <this.levels[i + 1])
 			{
-				var temp=minExp[i] + (level - levels[i]) * perExp[i];
+				var temp=this.minExp[i] + (level -this.levels[i]) * this.perExp[i];
 				//这里不改
-                                formatExp = !flag ?temp: (i > 4 && i <= 11 ?temp * 1.3: temp * 1.2);
+				formatExp =!this.flag?temp:(i > 4 && i <= 11?temp * 1.3: temp * 1.2);
 				break;
 			}
 		}
