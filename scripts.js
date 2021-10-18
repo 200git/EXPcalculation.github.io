@@ -61,6 +61,6 @@ function getExp()
         var lv=parseFloat(l_lv.value);
         var sv=parseFloat(s_lv.value);
         var result=meu.addExp(lv,sv)-parseFloat(exp.value);
-        alert("还需要:"+(result>=0?result:0)+"经验从"+lv+"级提升到"+sv+"级~"+meu.flag);
+        alert("还需要:"+(result>=0?result:0)+"经验从"+lv+"级提升到"+sv+"级~");
 }
 
